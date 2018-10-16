@@ -21,7 +21,7 @@ composer require magepal/magento2-newsletter-signup-email
 
 #### Step 2 - Enable extension ("cd" to {Magento root} folder)
 ```
-  php -f bin/magento module:enable --clear-static-content MagePal_GeoIp
+  php -f bin/magento module:enable --clear-static-content MagePal_NewsletterSignupEmail
   php -f bin/magento setup:upgrade
 ```
 
