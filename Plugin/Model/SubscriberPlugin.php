@@ -4,49 +4,53 @@
  * See COPYING.txt for license details.
  * http://www.magepal.com | support@magepal.com
  */
+
 namespace MagePal\NewsletterSignupEmail\Plugin\Model;
+
+use Magento\Newsletter\Model\Subscriber;
+use MagePal\NewsletterSignupEmail\Helper\Data;
 
 class SubscriberPlugin
 {
 
-    /** @var \MagePal\NewsletterSignupEmail\Helper\Data */
+    /** @var Data */
     protected $helper;
 
     public function __construct(
-        \MagePal\NewsletterSignupEmail\Helper\Data $helper
+        Data $helper
     ) {
         $this->helper = $helper;
     }
 
     /**
-     * @param \Magento\Newsletter\Model\Subscriber $subject
+     * @param Subscriber $subject
      * @param callable $proceed
      */
-    public function aroundSendUnsubscriptionEmail(\Magento\Newsletter\Model\Subscriber $subject, callable $proceed)
+    public function aroundSendUnsubscriptionEmail(Subscriber $subject, callable $proceed)
     {
-        if($this->helper->isEnabled()){
+        if ($this->helper->isEnabled()) {
             $proceed();
         }
     }
 
     /**
-     * @param \Magento\Newsletter\Model\Subscriber $subject
+     * @param Subscriber $subject
      * @param callable $proceed
      */
-    public function aroundSendConfirmationRequestEmail(\Magento\Newsletter\Model\Subscriber $subject, callable $proceed)
+    public function aroundSendConfirmationRequestEmail(Subscriber $subject, callable $proceed)
     {
-        if($this->helper->isEnabled()){
+        if ($this->helper->isEnabled()) {
             $proceed();
         }
     }
 
     /**
-     * @param \Magento\Newsletter\Model\Subscriber $subject
+     * @param Subscriber $subject
      * @param callable $proceed
      */
-    public function aroundSendConfirmationSuccessEmail(\Magento\Newsletter\Model\Subscriber $subject, callable $proceed)
+    public function aroundSendConfirmationSuccessEmail(Subscriber $subject, callable $proceed)
     {
-        if($this->helper->isEnabled()){
+        if ($this->helper->isEnabled()) {
             $proceed();
         }
     }

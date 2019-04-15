@@ -3,11 +3,18 @@
  * Copyright © MagePal LLC. All rights reserved.
  * See COPYING.txt for license details.
  * http://www.magepal.com | support@magepal.com
-*/
+ */
 
 namespace MagePal\NewsletterSignupEmail\Helper;
 
-class Data extends \Magento\Framework\App\Helper\AbstractHelper
+use Magento\Framework\App\Helper\AbstractHelper;
+use Magento\Store\Model\ScopeInterface;
+
+/**
+ * Class Data
+ * @package MagePal\NewsletterSignupEmail\Helper
+ */
+class Data extends AbstractHelper
 {
     const XML_PATH_ACTIVE = 'newsletter_signup_email/general/active';
 
@@ -20,7 +27,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         return !$this->scopeConfig->isSetFlag(
             self::XML_PATH_ACTIVE,
-            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+            ScopeInterface::SCOPE_STORE
         );
     }
 }
