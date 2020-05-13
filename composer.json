@@ -9,16 +9,16 @@
     "license": [
         "proprietary"
     ],
-    "homepage": "http://www.magepal.com/",
+    "homepage": "https://www.magepal.com/",
     "support": {
         "email": "support@magepal.com",
-        "issues": "https://github.com/magepal/magento2-google-tag-manager/issues/"
+        "issues": "https://github.com/magepal/magento2-newsletter-signup-email/issues/"
     },
     "authors": [
         {
             "name": "Renon Stewart",
             "email": "renon@magepal.com",
-            "homepage": "http://www.magepal.com/",
+            "homepage": "https://www.magepal.com/",
             "role": "Leader"
         }
     ],
@@ -29,7 +29,7 @@
         "magento/module-newsletter": "*"
     },
     "type": "magento2-module",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "autoload": {
         "files": [
             "registration.php"
